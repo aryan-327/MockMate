@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mock Mate</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button id="modeToggle" style="position:fixed;top:20px;right:20px;z-index:1000;">🌙 Dark Mode</button>
+  <header>
+    <h1>Mock Mate</h1>
+    <p>Your AI-powered interview partner</p>
+  </header>
+
+  <main>
+    <section class="setup">
+      <h2>Start Your Mock Interview</h2>
+      <form id="setupForm">
+  <label for="username">User ID:</label>
+  <input type="text" id="username" required>
+
+  <label for="company">Company Name:</label>
+  <input type="text" id="company" required>
+
+  <label for="role">Job Role:</label>
+  <input type="text" id="role" required>
+
+  <label style="display: flex; align-items: center; justify-content: flex-start; gap: 8px;">
+  Enable Camera (optional)
+  <input type="checkbox" id="enableCamera" style="margin-left: 8px;">
+</label>
+
+  <button type="submit">Start Interview</button>
+      </form>
+    </section>
+
+    <section class="interview hidden" id="interviewSection">
+      <h2>Interview in Progress</h2>
+      <div id="questionBox">Click "Next Question" to begin.</div>
+      
+      <textarea id="answerBox" placeholder="Type your answer here..."></textarea>
+      
+      <div class="buttons">
+        <button id="nextQuestion">Next Question</button>
+        <button id="submitAnswer">Submit Answer</button>
+      </div>
+
+      <div id="feedbackBox"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ for learners</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

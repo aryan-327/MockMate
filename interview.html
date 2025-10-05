@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mock Mate - Interview</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container interview-container">
+    <header>
+      <h2>Mock Interview in Progress</h2>
+      <nav>
+        <div class="nav">
+          <button onclick="window.location.href='index.html'" class="nav-btn">Home</button>
+          <button onclick="window.location.href='report.html'" class="nav-btn">Report</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="interview-box">
+      <div class="question-box">
+        <p id="question">Question</p>
+        <textarea id="answer" placeholder="Type your answer here..."></textarea>
+        <button onclick="nextQuestion()">Next Question</button>
+      </div>
+
+      <div class="camera-box">
+        <video id="camera" autoplay playsinline></video>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

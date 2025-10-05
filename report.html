@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mock Mate - Report</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background: #f4f4f9;
+    }
+    .report-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .report-card {
+      width: 100%;
+      max-width: 500px;
+    }
+    .nav {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    h1, h3 {
+      text-align: center;
+    }
+    button {
+      display: block;
+      margin: 24px auto 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="report-container">
+    <h1>Interview Report</h1>
+    <p><b>Name:</b> <span id="candidateName"></span></p>
+    <p><b>Company:</b> <span id="companyName"></span></p>
+    <p><b>Role:</b> <span id="roleName"></span></p>
+    <p><b>Date of Examination:</b> <span id="examDate"></span></p>
+
+    <nav>
+      <div class="nav">
+        <a href="index.html">Home</a> |
+        <a href="interview.html">Interview</a>
+      </div>
+    </nav>
+
+    <div class="report-card">
+      <h3>Score: <span id="score">--</span>/100</h3>
+      <p><b>Strengths:</b> <span id="strengths"></span></p>
+      <p><b>Improvements:</b> <span id="weaknesses"></span></p>
+    </div>
+
+    <button onclick="restart()">Start Again</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

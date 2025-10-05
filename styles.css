@@ -1,0 +1,270 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f9;
+  color: #333;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background: #181a1b;
+  color: #e0e0e0;
+  p{
+    color: whitesmoke;
+  }
+  h2{
+    color: whitesmoke;
+  }
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #0077cc;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode main {
+  background: #23272b;
+  color: #e0e0e0;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  background: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 10px 5px 0 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+body.dark-mode button {
+  background: #222e3c;
+  color: #e0e0e0;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.hidden {
+  display: none;
+}
+
+#feedbackBox {
+  margin-top: 15px;
+  padding: 10px;
+  background: #e9f7ef;
+  border-left: 5px solid #2ecc71;
+  display: none;
+}
+
+/* Interview Page Styles */
+.interview-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 24px;
+  background: var(--interview-bg, #fff);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.interview-box {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.question-box {
+  flex: 2;
+  background: #f4f4f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.question-box p {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.question-box textarea {
+  margin-bottom: 12px;
+}
+
+.camera-box {
+  flex: 1;
+  background: #f4f4f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.camera-box video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+  .interview-box {
+    flex-direction: column;
+  }
+  .camera-box, .question-box {
+    width: 100%;
+  }
+}
+
+/* Report Page Styles */
+.report-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  text-align: center;
+}
+
+.report-container h1 {
+  font-size: 2.2rem;
+  color: #0077cc;
+  margin-bottom: 18px;
+}
+
+.report-card {
+  background: linear-gradient(90deg, #e3f0ff 0%, #f9f9f9 100%);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 24px;
+  margin: 24px 0;
+  text-align: left;
+}
+
+.report-card h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+
+.report-card p {
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
+
+.report-card b {
+  color: #0077cc;
+}
+
+.report-container .nav {
+  margin-bottom: 18px;
+}
+
+.report-container .nav a {
+  color: #0077cc;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: bold;
+}
+
+.report-container .nav a:hover {
+  text-decoration: underline;
+}
+
+.report-container button {
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 18px;
+  transition: background 0.3s;
+}
+
+.report-container button:hover {
+  background: #005fa3;
+}
+
+/* Navigation buttons for interview page */
+.nav-btn {
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 0 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.nav-btn:hover {
+  background: #005fa3;
+}
+
+/* Add a simple icon for score */
+#score::before {
+  content: "🏆 ";
+}
